@@ -52,50 +52,43 @@ const Navbar = () => {
       };
   }, []);
   return (
-    <nav className=" border-gray-200 fixed w-full z-50">
-      <Information/>
-      <div className={`top-0 left-0 w-full flex py-4 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-[#141d50] shadow-lg' : 'bg-transparent'}`}>
-        <div className="m-auto w-fit flex gap-40 justify-between">
-          <a href="#">
-            <img src={logo} className="w-[120px]" />
-          </a>
-          <div className="flex gap-5">
-            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
-              Home
-            </a>
-            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
-              Speakers
-            </a>
-            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
-              Sponsers
-            </a>
-            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
-              Partners
-            </a>
-            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
-              Agenda
-            </a>
-            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
-              Floor plan
-            </a>
+    <nav className=" fixed bottom-0 w-full z-50 flex bg-[#121212e6]">
+        <div className="m-auto w-[1200px] flex gap-40 justify-between">
+            <div className="flex gap-6">
+                <div className="inline-block min-w-[70px] p-1 text-center my-[20px] ml-0 bg-[#e50134] text-white">
+                    <div className="text-[30px]">296</div>
+                    <div className="text-[12px]">Days</div>
+                </div>
+                
+                <div className="inline-block min-w-[70px] p-1 text-center my-[20px] ml-0 bg-[#141d50] text-white">
+                    <div className="text-[30px]">17</div>
+                    <div className="text-[12px]">Hours</div>
+                </div>
+                
+                <div className="inline-block min-w-[70px] p-1 text-center my-[20px] ml-0 bg-[#141d50] text-white">
+                    <div className="text-[30px]">8</div>
+                    <div className="text-[12px]">Minutes</div>
+                </div>
+                
+                <div className="inline-block min-w-[70px] p-1 text-center my-[20px] ml-0 bg-[#141d50] text-white">
+                    <div className="text-[30px]">37</div>
+                    <div className="text-[12px]">Seconds</div>
+                </div>
+
+            </div>
             <div className="flex">
-              <div className="flex items-center justify-center h-[50px] rounded-lg bg-white text-[#e50134] mr-5 ml-0 hover:bg-[#e50134] hover:text-white transition-colors duration-300 hover:cursor-pointer">
+              <div className="flex items-center justify-center  m-auto  h-[50px] rounded-lg bg-white text-[#e50134] mr-5 ml-0 hover:bg-[#e50134] hover:text-white transition-colors duration-300 hover:cursor-pointer">
                 <a href="#"  className="text-sm w-44 text-center m-auto ">
                   Become Sponsers
                 </a>
               </div>
-              <div className="flex items-center justify-center h-[50px] rounded-lg bg-[#e50134] text-white hover:text-[#e50134] hover:bg-white transition-colors duration-300 hover:cursor-pointer">
+              <div className="flex items-center justify-center  m-auto  h-[50px] rounded-lg bg-[#e50134] text-white hover:text-[#e50134] hover:bg-white transition-colors duration-300 hover:cursor-pointer">
                 <a href="#"  className="text-sm w-44 text-center m-atuo">
                   Buy Tickets
                 </a>
               </div>
             </div>
-          </div>
-          
         </div>
-        
-      </div>
-
     </nav>
 
 

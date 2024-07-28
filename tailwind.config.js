@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         'big-john': "Big John",
+        'avenir-book': "Avenir Book"
       },
     },
   },
