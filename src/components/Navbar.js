@@ -1,39 +1,126 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { FaFacebookF,FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp, FaFlickr, FaYoutube, FaTelegram } from 'react-icons/fa'; 
+import logo from "../assets/img/logo-no-background.png"
+import "./Navbar.css";
+const Information = () =>{
+  const [date,setDate] = useState("");
+  const [address, setAddress] = useState("");
+
+  useEffect(()=>{
+    setAddress("Zabeel Hall - 6, Dubai World Trade Centre");
+    setDate("21 - 22 May 2025, 10:00AM - 6:00PM");
+  },[]);
+
+  return (
+    <div className="h-content bg-[#00082E] w-full text-white ">
+      <div className="mx-auto w-fit flex gap-5 text-[16px]">
+        <div className="flex p-1">
+          <strong className="text-red-500 font-bold">
+            Address :&nbsp;
+          </strong>
+            {address}
+        </div>
+        <div className="flex p-1">
+          <strong className="text-red-500 font-bold">
+            Date & Time :&nbsp; 
+          </strong>
+            {date}
+        </div>
+        <div className="ml-5">
+          <div className="flex justify-center space-x-4 h-full ">
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF className=" transition-colors" size={15} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={16} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter size={16} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={16} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp size={16} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.flickr.com" target="_blank" rel="noopener noreferrer">
+                <FaFlickr size={16} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <FaYoutube size={16} />
+              </a>
+            </div>
+            <div className="h-full flex hover:bg-[#e50134] text-white items-center px-1">
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+                <FaTelegram size={16} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-        </a>
-        <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-          </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a href="#" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-            </li>
-            <li>
-              <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-            </li>
-          </ul>
+    <nav className=" border-gray-200 dark:bg-gray-900 fixed w-full z-50">
+      <Information/>
+      <div className="w-full flex py-5">
+        <div className="m-auto w-fit flex gap-40 justify-between">
+          <a href="#">
+            <img src={logo} className="w-[120px]" />
+          </a>
+          <div className="flex gap-5">
+            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
+              Home
+            </a>
+            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
+              Speakers
+            </a>
+            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
+              Sponsers
+            </a>
+            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
+              Partners
+            </a>
+            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
+              Agenda
+            </a>
+            <a href="#"  className="ml-3 m-auto cool-link no-underline text-white">
+              Floor plan
+            </a>
+            <div className="flex">
+              <div className="flex items-center justify-center h-[50px] rounded-lg bg-white text-[#e50134] mr-5 ml-0 hover:bg-[#e50134] hover:text-white transition-colors duration-300 hover:cursor-pointer">
+                <a href="#"  className="text-sm w-44 text-center m-auto ">
+                  Become Sponsers
+                </a>
+              </div>
+              <div className="flex items-center justify-center h-[50px] rounded-lg bg-[#e50134] text-white hover:text-[#e50134] hover:bg-white transition-colors duration-300 hover:cursor-pointer">
+                <a href="#"  className="text-sm w-44 text-center m-atuo">
+                  Buy Tickets
+                </a>
+              </div>
+            </div>
+          </div>
+          
         </div>
+        
       </div>
+
     </nav>
 
 

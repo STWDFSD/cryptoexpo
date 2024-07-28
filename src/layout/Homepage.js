@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const MainLayout = () => {
+const Homepage = () => {
   return (
     <div className="flex-1 flex flex-col">
       <Navbar />
@@ -11,4 +11,4 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export default Homepage;
