@@ -5,7 +5,7 @@ import envelopeBrands from "../assets/img/Sidebar/envelope-brands.svg"
 import topBrands from "../assets/img/Sidebar/top.svg"
 const Banner = () => {
     return (
-        <div className="fixed right-0 top-1/2 rounded-l-[20px] bg-gradient-to-r from-[#121e52] to-[#4d0515] z-[999] mt-[-170px] animate-bounceIn" >
+        <div className="hidden fixed md:block right-0 top-1/2 rounded-l-[20px] bg-gradient-to-r from-[#121e52] to-[#4d0515] z-[999] mt-[-170px] animate-bounceIn" >
             <div className="px-[20px] py-[15px] ">
                 <a href="#">
                     <img src={whatsappBrands} className="w-[25px]"/>

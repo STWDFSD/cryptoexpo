@@ -6,9 +6,9 @@ import BottomCountDown from "./Bottom_CountDown"
 const Footer = () => {
     return (
         <div>
-            <div className="bg-gradient-to-r from-[#121e52] to-[#e50134] [background:linear-gradient(100.07deg,#121e52,#e50134)] py-[50px] text-white w-full">
-                <div className="max-w-[1200px] m-auto flex flex-wrap">
-                    <div className="flex-none w-1/2">
+            <div className="bg-gradient-to-r from-[#121e52] to-[#e50134] [background:linear-gradient(100.07deg,#121e52,#e50134)] py-[50px] px-10 text-white w-full">
+                <div className="max-w-[1200px] m-auto block lg:flex flex-wrap">
+                    <div className="flex-none w-full lg:w-1/2">
                         <div className="w-[80%] m-auto">
                             <img src={Footer_Logo} className=""/>
                             <div className="mt-5 font-bold text-[18px]">Address</div>
@@ -17,7 +17,7 @@ const Footer = () => {
                             <SocialLink className="my-[10px]"/>
                         </div>
                     </div>
-                    <div className="flex-none w-1/2">
+                    <div className="flex-none w-full lg:w-1/2">
                         <div className="text-[33px] font-[700] font-avenir-book uppercase">
                             organised by
                         </div>
@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <div className="w-full bg-[#0a1034]">
                 <div className="max-w-[1200px]  m-auto  pb-[40px]">
-                    <div className="flex justify-between pt-[40px] pb-[20px]">
+                    <div className="flex justify-between pt-[40px] pb-[20px] px-10">
                         <div className="text-white">Copyright © 2024 Crypto Expo. All Rights Reserved</div>
                         <div className="flex">
                             <a href="#"  className="ml-3 m-auto cool-link no-underline text-white pr-[16px] border-r">
@@ -43,12 +43,12 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="text-[11px] text-white">
+                    <div className="text-[11px] text-white px-10">
                         Disclaimer: Cryptocurrencies are complex instruments and come with a high risk of losing money rapidly due to its volatility. You should consider whether you understand how cryptocurrency work and whether you can afford to take the high risk of losing your money. This event is organised to provide educational content and networking opportunities for the virtual asset Industry. This event and our company does not involve in any recommendation or investment or selling/buying of any financial products. Visitors under the age of 18 will not be admitted.
                     </div>
                 </div>
             </div>
-            <div className="h-[115px]"></div>
+            <div className="h-[115px] hidden md:block"></div>
             <BottomCountDown />
         </div>
     );
