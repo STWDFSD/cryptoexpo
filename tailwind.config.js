@@ -12,17 +12,17 @@ module.exports = {
         '5': '20px',
       },
       fontFamily: {
-        'big-john': "Big John",
+        'Medium-500': "Medium 500",
         'avenir-book': "Avenir Book"
       },
       screens: {
-        ssm:'600px',
+        ssm: '600px',
         sm: '640px',
         md: '768px',
         md1: '780px',
         lg: '1024px',
         xl: '1280px',
-        
+
       },
     },
   },
